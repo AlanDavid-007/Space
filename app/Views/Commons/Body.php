@@ -6,7 +6,7 @@
 
       <h1 class="logo me-auto"><a href="index.html">Arsha</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="<?php echo base_url('/assets/img/logo.png')?>" alt="" class="img-fluid"></a>-->
+      <!-- <a href="index.html" class="logo me-auto"><img src="<?php echo base_url('/assets/img/logo.png') ?>" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="<?php echo base_url('/assets/img/hero-img.png')?>" class="img-fluid animated" alt="">
+          <img src="<?php echo base_url('/assets/img/hero-img.png') ?>" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -71,27 +71,27 @@
         <div class="row" data-aos="zoom-in">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo base_url('/assets/img/clients/client-1.png')?>" class="img-fluid" alt="">
+            <img src="<?php echo base_url('/assets/img/clients/client-1.png') ?>" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo base_url('/assets/img/clients/client-2.png')?>" class="img-fluid" alt="">
+            <img src="<?php echo base_url('/assets/img/clients/client-2.png') ?>" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo base_url('/assets/img/clients/client-3.png')?>" class="img-fluid" alt="">
+            <img src="<?php echo base_url('/assets/img/clients/client-3.png') ?>" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo base_url('/assets/img/clients/client-4.png')?>" class="img-fluid" alt="">
+            <img src="<?php echo base_url('/assets/img/clients/client-4.png') ?>" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo base_url('/assets/img/clients/client-5.png')?>" class="img-fluid" alt="">
+            <img src="<?php echo base_url('/assets/img/clients/client-5.png') ?>" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo base_url('/assets/img/clients/client-6.png')?>" class="img-fluid" alt="">
+            <img src="<?php echo base_url('/assets/img/clients/client-6.png') ?>" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -148,7 +148,51 @@
             </div>
 
             <div class="accordion-list">
-              <ul>
+            <div class="container">
+              <form method="post" id="add_create" name="add_create" action="<?= site_url('/submit-form') ?>">
+                <div class="form-group">
+                  <label>Title</label>
+                  <input type="text" name="title" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Description</label>
+                  <input type="text" name="description" class="form-control">
+                </div>
+                <div class="form-group mt-3">
+                  <button type="submit" class="btn btn-primary btn-block">Update Data</button>
+                </div>
+              </form>
+            </div>
+                        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+            <script>
+              if ($("#add_create").length > 0) {
+                $("#add_create").validate({
+                  rules: {
+                    Title: {
+                      required: true,
+                    },
+                    Description: {
+                      required: true,
+                      maxlength: 60,
+                      Description: true,
+                    },
+                  },
+                  messages: {
+                    Title: {
+                      required: "Title is required.",
+                    },
+                    Description: {
+                      required: "Description is required.",
+                      Description: "It does not seem to be a valid Description.",
+                      maxlength: "The Description should be or equal to 60 chars.",
+                    },
+                  },
+                })
+              }
+            </script>
+              <ul class="mt-5">
                 <li>
                   <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
@@ -181,7 +225,7 @@
 
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("<?php echo base_url('/assets/img/why-us.png')?>");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("<?php echo base_url('/assets/img/why-us.png') ?>");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
         </div>
 
       </div>
@@ -193,7 +237,7 @@
 
         <div class="row">
           <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="<?php echo base_url('/assets/img/skills.png')?>" class="img-fluid" alt="">
+            <img src="<?php echo base_url('/assets/img/skills.png') ?>" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
             <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>
@@ -323,91 +367,91 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-1.jpg')?>" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-1.jpg') ?>" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>App 1</h4>
               <p>App</p>
-              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-1.jpg')?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-1.jpg') ?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-2.jpg')?>" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-2.jpg') ?>" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-2.jpg')?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-2.jpg') ?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-3.jpg')?>" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-3.jpg') ?>" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>App 2</h4>
               <p>App</p>
-              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-3.jpg')?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-3.jpg') ?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-4.jpg')?>" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-4.jpg') ?>" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Card 2</h4>
               <p>Card</p>
-              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-4.jpg')?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-4.jpg') ?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-5.jpg')?>" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-5.jpg') ?>" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Web 2</h4>
               <p>Web</p>
-              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-5.jpg')?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-5.jpg') ?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-6.jpg')?>" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-6.jpg') ?>" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>App 3</h4>
               <p>App</p>
-              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-6.jpg')?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-6.jpg') ?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-7.jpg')?>" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-7.jpg') ?>" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Card 1</h4>
               <p>Card</p>
-              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-7.jpg')?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-7.jpg') ?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-8.jpg')?>" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-8.jpg') ?>" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Card 3</h4>
               <p>Card</p>
-              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-8.jpg')?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-8.jpg') ?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-9.jpg')?>" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?php echo base_url('/assets/img/portfolio/portfolio-9.jpg') ?>" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-9.jpg')?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="<?php echo base_url('/assets/img/portfolio/portfolio-9.jpg') ?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
@@ -430,7 +474,7 @@
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="<?php echo base_url('/assets/img/team/team-1.jpg')?>" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url('/assets/img/team/team-1.jpg') ?>" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
                 <span>Chief Executive Officer</span>
@@ -447,7 +491,7 @@
 
           <div class="col-lg-6 mt-4 mt-lg-0">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="<?php echo base_url('/assets/img/team/team-2.jpg')?>" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url('/assets/img/team/team-2.jpg') ?>" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
                 <span>Product Manager</span>
@@ -464,7 +508,7 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="<?php echo base_url('/assets/img/team/team-3.jpg')?>" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url('/assets/img/team/team-3.jpg') ?>" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>William Anderson</h4>
                 <span>CTO</span>
@@ -481,7 +525,7 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="<?php echo base_url('/assets/img/team/team-4.jpg')?>" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url('/assets/img/team/team-4.jpg') ?>" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Amanda Jepson</h4>
                 <span>Accountant</span>

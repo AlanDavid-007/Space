@@ -22,6 +22,13 @@ $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
+// CRUD RESTful Routes
+$routes->get('Home', 'Home::index');
+$routes->get('home-form', 'Home::create');
+$routes->post('submit-form', 'Home::store');
+$routes->get('edit-view/(:num)', 'Home::singleTopic/$1');
+$routes->post('update', 'Home::update');
+$routes->get('delete/(:num)', 'Home::delete/$1');
 
 /*
  * --------------------------------------------------------------------

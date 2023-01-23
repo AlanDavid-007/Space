@@ -148,7 +148,7 @@
             </div>
 
             <div class="accordion-list">
-            <div class="container">
+              <!-- <div class="container">
               <form method="post" id="add_create" name="add_create" action="<?= site_url('/submit-form') ?>">
                 <div class="form-group">
                   <label>Title</label>
@@ -191,37 +191,28 @@
                   },
                 })
               }
-            </script>
+            </script> -->
               <ul class="mt-5">
-                <li>
-                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                    <p>
-                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                    </p>
-                  </div>
-                </li>
-
+                <?php foreach ($homeTopic as $home) : ?>
+                  <li>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span><?php echo 0 . $home['id']; ?></span><?php echo $home['title']; ?><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                      <p>
+                        <?php echo $home['description']; ?>
+                      </p>
+                      <button type="button"><?php echo anchor('Home/#edit' . $home['id'], 'Edit') ?></button>
+                      <button type="button" onclick="confirmation()"><?php echo anchor('Home/#delete' . $home['id'], 'Delete') ?></button>
+                    </div>
+                  </li>
+                <?php endforeach; ?>
               </ul>
+              <?php echo $pager->links(); ?>
             </div>
+            <script>
+              function confirmation() {
+                confirm('Do you want to delete this topic?');
+              }
+            </script>
 
           </div>
 

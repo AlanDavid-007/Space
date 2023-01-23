@@ -38,7 +38,7 @@ class Database extends Config
         'database' => 'Space',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
-        'pConnect' => true,
+        'pConnect' => false,
         'DBDebug'  => (ENVIRONMENT !== 'production'),
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',

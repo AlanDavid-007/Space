@@ -148,18 +148,20 @@
             </div>
 
             <div class="accordion-list">
-              <!-- <div class="container">
+              <div class="container">
               <form method="post" id="add_create" name="add_create" action="<?= site_url('/submit-form') ?>">
                 <div class="form-group">
                   <label>Title</label>
-                  <input type="text" name="title" class="form-control">
+                  <input type="text" value="<?php echo isset($topic['title']) ? $topic['title'] : ''?>" name="title" class="form-control">
                 </div>
                 <div class="form-group">
                   <label>Description</label>
-                  <input type="text" name="description" class="form-control">
+                  <input type="text" value="<?php echo isset($topic['title']) ? $topic['title'] : ''?>"
+                   name="description" class="form-control">
                 </div>
                 <div class="form-group mt-3">
-                  <button type="submit" class="btn btn-primary btn-block">Update Data</button>
+                  <input type="submit" class="btn btn-primary btn-block" value="Update Data">
+                  <input type="hidden" name="id" value="<?php echo isset($topic['id']) ? $topic['id'] : ''?>">
                 </div>
               </form>
             </div>
@@ -191,7 +193,12 @@
                   },
                 })
               }
-            </script> -->
+            </script>
+            <div class="container mt-5">
+              <div class="alert alert-info">
+                <?php echo $message; ?>
+              </div>
+            </div>
               <ul class="mt-5">
                 <?php foreach ($homeTopic as $home) : ?>
                   <li>

@@ -200,6 +200,7 @@
               </div>
             </div>
               <ul class="mt-5">
+                <?php echo $message;?>
                 <?php foreach ($homeTopic as $home) : ?>
                   <li>
                     <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span><?php echo 0 . $home['id']; ?></span><?php echo $home['title']; ?><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
@@ -207,8 +208,8 @@
                       <p>
                         <?php echo $home['description']; ?>
                       </p>
-                      <button type="button"><?php echo anchor('Home/#edit' . $home['id'], 'Edit') ?></button>
-                      <button type="button" onclick="confirmation()"><?php echo anchor('Home/#delete' . $home['id'], 'Delete') ?></button>
+                      <button type="button"><?php echo anchor('Home/edit/' . $home['id'], 'Edit') ?></button>
+                      <button type="button" onclick="confirmation()"><?php echo anchor('Home/delete/' . $home['id'], 'Delete') ?></button>
                     </div>
                   </li>
                 <?php endforeach; ?>

@@ -15,8 +15,9 @@ class Home extends BaseController
         public function index()
     {
         // show topics list
-         return view('Home', ['homeTopic' => $this->topic->paginate(3),
-        'pager' => $this->topic->pager
+         return view('Home', [
+            'homeTopic' => $this->topic->paginate(3),
+            'pager' => $this->topic->pager
     ]);
     }
     public function delete($id) {

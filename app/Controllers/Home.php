@@ -29,7 +29,8 @@ class Home extends BaseController
         }
         public function store() {
             if ($this->topic->save($this->request->getPost())) {
-                return view('Home', ['message' => 'Topic Successfully added']);
+                return view('Alert', [
+                'message' => 'Topic Successfully added']);
             } else {
                     echo 'Error';
                 }

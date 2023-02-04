@@ -4,9 +4,9 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Arsha</a></h1>
+      <h1 class="logo me-auto"><a href="http://localhost/Space/public/">Arsha</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="<?php echo base_url('/assets/img/logo.png') ?>" alt="" class="img-fluid"></a>-->
+      <!-- <a href="http://localhost/Space/public/" class="logo me-auto"><img src="<?php echo base_url('/assets/img/logo.png') ?>" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -194,14 +194,8 @@
                 })
               }
             </script>
-            <div class="container mt-5">
-              <div class="alert alert-info">
-                <?php echo $message; ?>
-              </div>
-            </div>
               <ul class="mt-5">
-                <?php echo $message;?>
-                <?php foreach ($homeTopic as $home) : ?>
+                <?php foreach ((array)$homeTopic as $home) : ?>
                   <li>
                     <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span><?php echo 0 . $home['id']; ?></span><?php echo $home['title']; ?><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                     <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
@@ -214,7 +208,7 @@
                   </li>
                 <?php endforeach; ?>
               </ul>
-              <?php echo $pager->links(); ?>
+                <?php echo $pager->links();?>
             </div>
             <script>
               function confirmation() {

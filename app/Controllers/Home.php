@@ -22,7 +22,10 @@ class Home extends BaseController
     }
     public function delete($id) {
         if ($this->topic->delete($id)) {
-            return view('Home', ['message' => 'Topic Successfully Deleted']);
+            return view('Alert', [
+                'message' => 'Topic Successfully Deleted',
+                'title' => 'Delete'
+            ]);
         } else {
                 echo 'Error';
             }
@@ -30,12 +33,26 @@ class Home extends BaseController
         public function store() {
             if ($this->topic->save($this->request->getPost())) {
                 return view('Alert', [
-                'message' => 'Topic Successfully added']);
+                'message' => 'Topic Successfully added',
+                'title' => 'Add'
+            ]);
             } else {
                     echo 'Error';
                 }
             }
             public function edit($id) {
-              return view('Home', ['topic' => $this->topic->find($id)]);
+              return view('Form', [
+                'topic' => $this->topic->find($id),
+                'title' => 'Edit',
+            ]);
+                }
+            
+                public function update() {
+                    if ($this->topic->save($this->request->getPost())) {
+                        return view('Alert', [
+                            'title' => 'Edit',
+                            'message' => 'Topic Successfully edited',
+                        ]);
+                    };
                 }
     }

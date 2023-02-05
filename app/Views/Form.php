@@ -3,7 +3,7 @@
     require __DIR__ . '/Commons/Header.php';
     //  End Header
         // Body
-        require __DIR__ . '/Commons/Body_Alert.php';
+        require __DIR__ . '/Commons/Body_Form.php';
         // End Body
             // Footer
             require __DIR__ . '/Commons/Footer.php';

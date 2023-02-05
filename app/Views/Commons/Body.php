@@ -4,7 +4,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="http://localhost/Space/public/">Arsha</a></h1>
+      <h1 class="logo me-auto"><a href="http://localhost/Space/public/">Space</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="http://localhost/Space/public/" class="logo me-auto"><img src="<?php echo base_url('/assets/img/logo.png') ?>" alt="" class="img-fluid"></a>-->
 
@@ -15,23 +15,6 @@
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
         </ul>
@@ -47,11 +30,15 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Better Solutions For Your Business</h1>
-          <h2>We are team of talented designers making websites with Bootstrap</h2>
+          <h1>Space Project</h1>
+          <h2>{Alan David} - I'm a Full Stack Developer, Game Developer and Designer.</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a class="glightbox btn-watch-video" href="https://github.com/AlanDavid-007/Space">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+            </a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -141,59 +128,58 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
             <div class="content">
-              <h3>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
+              <h3>Topic Generator</strong></h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                Topic Generator uses CRUD Methods to list, create, edit and delete topics.
               </p>
             </div>
 
             <div class="accordion-list">
               <div class="container">
-              <form method="post" id="add_create" name="add_create" action="<?= site_url('/submit-form') ?>">
-                <div class="form-group">
-                  <label>Title</label>
-                  <input type="text" value="<?php echo isset($topic['title']) ? $topic['title'] : ''?>" name="title" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label>Description</label>
-                  <input type="text" value="<?php echo isset($topic['title']) ? $topic['title'] : ''?>"
-                   name="description" class="form-control">
-                </div>
-                <div class="form-group mt-3">
-                  <input type="submit" class="btn btn-primary btn-block" value="Update Data">
-                  <input type="hidden" name="id" value="<?php echo isset($topic['id']) ? $topic['id'] : ''?>">
-                </div>
-              </form>
-            </div>
-                        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
-            <script>
-              if ($("#add_create").length > 0) {
-                $("#add_create").validate({
-                  rules: {
-                    Title: {
-                      required: true,
+                <form method="post" id="add_create" name="add_create" action="<?= site_url('/submit-form') ?>">
+                  <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" value="<?php echo isset($topic['title']) ? $topic['title'] : '' ?>" name="title" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" value="<?php echo isset($topic['title']) ? $topic['title'] : '' ?>" name="description" class="form-control">
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="submit" class="btn btn-primary btn-block" value="Update Data">
+                    <input type="hidden" name="id" value="<?php echo isset($topic['id']) ? $topic['id'] : '' ?>">
+                  </div>
+                </form>
+              </div>
+              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+              <script>
+                if ($("#add_create").length > 0) {
+                  $("#add_create").validate({
+                    rules: {
+                      Title: {
+                        required: true,
+                      },
+                      Description: {
+                        required: true,
+                        maxlength: 60,
+                        Description: true,
+                      },
                     },
-                    Description: {
-                      required: true,
-                      maxlength: 60,
-                      Description: true,
+                    messages: {
+                      Title: {
+                        required: "Title is required.",
+                      },
+                      Description: {
+                        required: "Description is required.",
+                        Description: "It does not seem to be a valid Description.",
+                        maxlength: "The Description should be or equal to 60 chars.",
+                      },
                     },
-                  },
-                  messages: {
-                    Title: {
-                      required: "Title is required.",
-                    },
-                    Description: {
-                      required: "Description is required.",
-                      Description: "It does not seem to be a valid Description.",
-                      maxlength: "The Description should be or equal to 60 chars.",
-                    },
-                  },
-                })
-              }
-            </script>
+                  })
+                }
+              </script>
               <ul class="mt-5">
                 <?php foreach ((array)$homeTopic as $home) : ?>
                   <li>
@@ -202,13 +188,25 @@
                       <p>
                         <?php echo $home['description']; ?>
                       </p>
-                      <button type="button"><?php echo anchor('Home/edit/' . $home['id'], 'Edit') ?></button>
-                      <button type="button" onclick="confirmation()"><?php echo anchor('Home/delete/' . $home['id'], 'Delete') ?></button>
+                      <div class="container d-flex justify-content-end">
+                        <a class="btn btn-success" style="width: 10%;" href="<?php echo 'Home/edit/' . $home['id']; ?>">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                          </svg>
+                        </a>
+                        <a class=" btn btn-danger" style="width: 10%; margin-left: 2%;" href="<?php echo 'Home/delete/' . $home['id']; ?>">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </li>
                 <?php endforeach; ?>
               </ul>
-                <?php echo $pager->links();?>
+              <?php echo $pager->links(); ?>
             </div>
             <script>
               function confirmation() {
@@ -218,7 +216,8 @@
 
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("<?php echo base_url('/assets/img/why-us.png') ?>");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class=" col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("<?php echo base_url('/assets/img/why-us.png') ?>");' data-aos="zoom-in" data-aos-delay="150">&nbsp;
+          </div>
         </div>
 
       </div>

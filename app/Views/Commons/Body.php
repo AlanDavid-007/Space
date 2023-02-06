@@ -91,26 +91,23 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>About Us</h2>
+          <h2>About the Project</h2>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              This Project has the objective to train some Features.
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+              <li><i class="ri-check-double-line"></i> CRUD PHP with CI 4</li>
+              <li><i class="ri-check-double-line"></i> Jquery Password Strength Meter</li>
               <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              + Projects in my Github.
             </p>
             <a href="#" class="btn-learn-more">Learn More</a>
           </div>
@@ -151,39 +148,10 @@
                   </div>
                 </form>
               </div>
-              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
-              <script>
-                if ($("#add_create").length > 0) {
-                  $("#add_create").validate({
-                    rules: {
-                      Title: {
-                        required: true,
-                      },
-                      Description: {
-                        required: true,
-                        maxlength: 60,
-                        Description: true,
-                      },
-                    },
-                    messages: {
-                      Title: {
-                        required: "Title is required.",
-                      },
-                      Description: {
-                        required: "Description is required.",
-                        Description: "It does not seem to be a valid Description.",
-                        maxlength: "The Description should be or equal to 60 chars.",
-                      },
-                    },
-                  })
-                }
-              </script>
               <ul class="mt-5">
                 <?php foreach ((array)$homeTopic as $home) : ?>
                   <li>
-                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span><?php echo 0 . $home['id']; ?></span><?php echo $home['title']; ?><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><p><?php echo 0 . $home['id'] . '|' .$home['title']; ?></p><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                     <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                       <p>
                         <?php echo $home['description']; ?>
@@ -326,20 +294,28 @@
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container" data-aos="zoom-in">
-
+        <h2 class="text-light">Jquery Password Strength Meter <i class="bi bi-thermometer"></i></h2>
         <div class="row">
-          <div class="col-lg-9 text-center text-lg-start">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
-          </div>
+          <section class="password-section">
+            <label for="password" class="text-light">Enter password</label>
+            <input type="password" name="password" id="password" data-strength class="text-light">
+
+            <p id="password-strength-text" class="text-light mt-5"></p>
+            <h2 class="text-light mt-5">Tips</h2>
+            <p id="tips" class="text-light">
+              <ul class="text-light mt-2">
+                <li>Dates are often easy to guess Add another word or two;</li>
+                <li>Uncommon words are better;</li>
+                <li>Avoid dates and years that are associated with you;</li>
+                <li>Short keyboard patterns are easy to guess;</li>
+                <li>Use a longer keyboard pattern with more turns;</li>
+              </ul>
+            </p>
+          </section>
         </div>
 
       </div>
     </section><!-- End Cta Section -->
-
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">

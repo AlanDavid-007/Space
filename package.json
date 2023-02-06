@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.3",
+    "jquery-validation": "^1.19.5",
+    "zxcvbn": "^4.4.2"
+  }
+}
